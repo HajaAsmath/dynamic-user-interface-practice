@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Jost:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html, body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arvo', serif;
+}
+
+.main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10vw 90vw;
+}
+
+#title {
+    height: 3.5em;
+    background-color: lightcoral;
+    text-align: center;
+}
+
+#title>label {
+    font-size: 2em;
+    display: inline-block;
+    padding-top: 7px;
+}
+
+#nav-bar {
+    height: 100%;
+    background-color: lightslategray;
+}
+
+#nav-bar > div {
+    padding: 5px 10px;
+}
+
+.nav-title {
+    cursor: pointer;
+}
+
+.nav-title > *{
+    pointer-events: none;
+}
+
+.nav-content > li {
+    cursor: pointer;
+}
+
+.nav-title > label {
+    position: relative;
+    bottom: 6px;
+}
+
+.hide {
+    display: none;
+}
+
+#hamburger-menu {
+    visibility: hidden;
+}
+
+#carousal {
+    margin: 5em 10em 0 10em;
+    text-align: center;
+}
+
+.food-img {
+    max-width: 50vw;
+    max-height: auto;
+}
+
+.arrow {
+    position: relative;
+    bottom: 5em;
+    margin: 0 10px;
+    font-size: 3em;
+    color: #bcbebf;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: black;
+}
+
+#nav-dots {
+    height: 10px;
+    width: 10em;
+    margin: 0 auto;
+}
+
+#nav-dots > div {
+    height: 10px;
+    width: 10px;
+    border: solid black;
+    margin: 10px 5px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fill {
+    background-color: black;
+}
+
+@media (max-width: 470px) {
+    #hamburger-menu {
+        float: left;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        visibility: visible;
+    }
+
+    #title>label {
+        font-size: 6vw;
+    }
+}
+
+@media (min-width: 470px) {
+    #nav-bar {
+        display: inline-block;
+    }
+}
