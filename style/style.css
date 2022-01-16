@@ -12,6 +12,11 @@ html, body {
     height: 100%;
 }
 
+.main-grid {
+    display: grid;
+    grid-template-columns: 10em 9fr;
+}
+
 #title {
     height: 3.5em;
     background-color: lightcoral;
@@ -27,6 +32,11 @@ html, body {
 #nav-bar {
     height: 100%;
     background-color: lightslategray;
+    transition: width 1s;
+}
+
+#nav-bar.trans {
+    width: 100%;
 }
 
 #nav-bar > div {
@@ -61,6 +71,10 @@ html, body {
 #content {
     display: grid;
     grid-template-rows: fit-content(100%) fit-content(100%);
+}
+
+#overlay {
+    background: rgb(0,0,0, 0.5);
 }
 
 #carousal {
@@ -112,15 +126,19 @@ html, body {
         top: 10px;
         left: 10px;
         visibility: visible;
+        cursor: pointer;
     }
 
     #title>label {
         font-size: 4vw;
     }
+
+
 }
 
 @media (min-width: 990px) {
     #nav-bar {
+        width: 100%;
         display: inline-block;
     }
 

@@ -32,10 +32,15 @@ function dropDown(ele) {
     })
     hamburgerButton.addEventListener('click', (e) => {
         const nav = document.querySelector('#nav-bar')
+        const mainContainer = document.querySelector('.main-container')
         if(nav.classList.contains('hide')) {
             nav.classList.remove('hide');
+            nav.classList.add('trans');
+            mainContainer.classList.add('main-grid');
         } else {
             nav.classList.add('hide');
+            nav.classList.remove('trans');
+            mainContainer.classList.remove('main-grid');
         }
     });
 
